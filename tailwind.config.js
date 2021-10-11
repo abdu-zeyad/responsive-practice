@@ -4,6 +4,11 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
+    fontFamily: {
+      'nunito': ['nunito', 'sans-serif'],
+      'MyFont': ['"My Font"', 'serif'],
+      'sexy': ['Changa', 'sans-serif']
+    },
   },
   variants: {
     extend: {},

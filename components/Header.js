@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
+import Head from 'next/head';
 
 export default function Header() {
   const [showNav, setShowNav] = useState(true);
 
   return (
-    <div className='wrapper relative '>
-      <div className=' absolute m-5  h-32 sm:h-40 border-2 w-11/12 flex  justify-between items-center'>
+    <div className='wrapper  relative font-sexy'>
+
+      <div className='bg-green-100 h-5'></div>
+      <div className='  m-5  h-32 sm:h-40 border-2 w-11/12 flex  justify-between items-center'>
         <div className='pb-5 pl-5 sm:invisible'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -24,7 +27,7 @@ export default function Header() {
           </svg>
         </div>
         <div className='flex justify-end gap-10 w-3/5  invisible sm:visible '>
-          <p className='  text-right hover:text-green-400  '>الرئيسية </p>
+          <p className='  text-right hover:text-green-400   ' >الرئيسية </p>
           <p className=' text-right hover:text-green-400'>عن معا </p>
           <p className=' text-right hover:text-green-400'>الجمعيات الخيرية </p>
         </div>
@@ -39,8 +42,10 @@ export default function Header() {
       {showNav ? (
         <div></div>
       ) : (
-        <div className='absolute  w-3/5 p-5 z-50  bg-white'>
-          <div className='relative h-5'>
+        <div className='  w-3/5 p-5 z-50   sm:w-32  bg-green-50 mt-5  absolute top-0  
+         -left-2/4 translate-x-3/4 duration-700
+        '>
+          <div className=' h-5   w-full   '>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               class='h-6 w-6'
@@ -48,7 +53,7 @@ export default function Header() {
               viewBox='0 0 24 24'
               stroke='currentColor'
               onClick={() => setShowNav(!showNav)}
-              className=' absolute right-0  w-5  mb-4  '
+              className=' mx-auto   w-5  mb-4   '
             >
               <path
                 stroke-linecap='round'
@@ -59,9 +64,9 @@ export default function Header() {
             </svg>
           </div>
 
-          <p className='  text-right hover:text-green-400'>الرئيسية </p>
-          <p className=' text-right hover:text-green-400'>عن معا </p>
-          <p className=' text-right hover:text-green-400'>الجمعيات الخيرية </p>
+          <p className='  text-center hover:text-green-400'>الرئيسية </p>
+          <p className=' text-center hover:text-green-400'>عن معا </p>
+          <p className=' text-center hover:text-green-400'>الجمعيات الخيرية </p>
         </div>
       )}
     </div>
